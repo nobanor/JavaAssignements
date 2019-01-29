@@ -9,10 +9,12 @@ public class ChangeMaker {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner (System.in);
 		
+		//Welcome Message
 		System.out.println("Welcome to the Change Maker Calcuator");
+		//Prompt user to enter cents 
 		System.out.println("Plese enter amount change amount in cents");
 		
-		//Prompt user to enter cents 
+		
 		double cents = sc.nextDouble();
 		
 		
@@ -25,36 +27,34 @@ public class ChangeMaker {
 		//Get pennies
 		cents = getPennies(cents);
 		
-			
-		
 	}
 	
 	public static double getQuarters(double cents)
 	{
 		double change = cents%25;
 		double quarters = (cents - change) / 25;
-		System.out.println ((int) quarters + "quarters");
+		System.out.println ((int) quarters + " quarters");
 		return change;
 	}
 	public static double getDimes(double cents)
 	{
 		double change = cents%10;
 		double dimes = (cents - change) / 10;
-		System.out.println ((int) dimes + "dimes");
+		System.out.println ((int) dimes + " dimes");
 		return change;
 	}
 	public static double getNickels(double cents)
 	{
 		double change = cents%5;
 		double nickels = (cents - change) / 5;
-		System.out.println ((int) nickels + "nickels");
+		System.out.println ((int) nickels + " nickels");
 		return change;
 	}
 	public static double getPennies(double cents)
 	{
 		double change = cents%1;
 		double pennies= (cents - change) / 1;
-		System.out.println ((int) pennies + "pennies");
+		System.out.println ((int) pennies + " pennies");
 		return change;
 	}
 
